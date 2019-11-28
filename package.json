@@ -1,0 +1,19 @@
+{
+    "scripts": {
+        "build": "npm run build:js",
+        "watch": "npm-run-all --parallel watch:*",
+        "clean": "cd ./dist & del /S *.include.* & for /f \"delims=\" %d in ('dir /s /b /ad ^| sort /r') do rd \"%d\" /Q",
+        "build:js": "tsc"
+    },
+    "dependencies": {
+        "@types/dotenv": "^6.1.1",
+        "@types/node": "^12.11.1",
+        "@types/request": "^2.48.3",
+        "@types/request-promise": "^4.1.44",
+        "compromise": "^11.14.3",
+        "dotenv": "^8.2.0",
+        "netcat": "^1.4.0",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.4"
+    }
+}
